@@ -9,6 +9,8 @@ Setup your applications structurre in `orchestration.yaml`
 ```yaml
 authorizers: # you can setup different authorizers for different tasks
              # this endpoint needs to return a response of {"authorised": true|false}
+             # the headers, and POST data of the current request is forwarded on
+             # to make it possible to supply API keys and also Bearer Tokens etc..
   frontend-auth:
     host: 127.0.0.1
     port: 4500
