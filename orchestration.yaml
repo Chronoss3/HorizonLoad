@@ -1,0 +1,16 @@
+authorizers:
+  frontend-auth:
+    host: 127.0.0.1
+    port: 4500
+
+service-map:
+    dv-admin-service:
+        route: /dv-admin
+        require-auth: frontend-auth
+        servers:
+            main:
+                host: 127.0.0.1
+                port: 3000
+        
+    
+    
